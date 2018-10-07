@@ -2,6 +2,7 @@ package com.mumu.myspringboot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ImportResource;
 import org.springframework.web.bind.annotation.RestController;
 
 /*
@@ -32,6 +33,19 @@ import org.springframework.web.bind.annotation.RestController;
 )
  */
 
+
+/*
+ B级知识点1[无额外说明的都是常用A级知识点。]：
+ @ImportResource({"classpath:someOther-context1.xml","classpath:someOther-context2.xml"})
+ springboot 提倡零配置，如果实际项目中确实需要使用xml配置，我们可以使用@ImportResource注解来加载xml.
+
+ 知识点2：springboot 基于jar包运行的，已打成jar包的程序可以直接使用
+ java -jar   某某.jar  来运行。
+ 或者  java -jar xx.jar --server.port=9191 来修改tomcat的端口号。
+
+
+ 知识点3：https://www.cnblogs.com/winner-0715/p/6666579.html springboot 的热部署。
+ */
 @SpringBootApplication //开启自动配置。建议入口的位置，就在现在的所在的包位置。
 public class MySpringbootApplication {
 
