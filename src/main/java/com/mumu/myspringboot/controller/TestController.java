@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 public class TestController {
-
+    //如果有偏爱icon ,把favicon.ico 文件丢到resources 根目录下即可。注意：文件名不可变。
     @RequestMapping("/")
     public String index(){
 
